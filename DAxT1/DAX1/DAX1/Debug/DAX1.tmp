@@ -1,0 +1,49 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328"</DEVICE>
+ <WORKING_DIR>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\Debug\DAX1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>DAX1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>DAX1.map</FILE>
+  <FILE>DAX1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <START><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>24</LINE></START>
+  <STARTDEC><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>31</LINE></STARTDEC>
+  <PART1DONE><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>37</LINE></PART1DONE>
+  <PART2><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>43</LINE></PART2>
+  <ISDONE><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>49</LINE></ISDONE>
+  <RETURN><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>53</LINE></RETURN>
+  <PART3><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>103</LINE></PART3>
+  <STARTDIVISION><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>59</LINE></STARTDIVISION>
+  <DIV5><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>78</LINE></DIV5>
+  <NOTDIV5><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>90</LINE></NOTDIV5>
+  <START3><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>112</LINE></START3>
+  <ENDYSTACK><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>119</LINE></ENDYSTACK>
+  <GETNUMY><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>128</LINE></GETNUMY>
+  <SETYFLAG><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>124</LINE></SETYFLAG>
+  <GETZ><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>149</LINE></GETZ>
+  <ADDOVERFLOW><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>142</LINE></ADDOVERFLOW>
+  <CONTINUE3><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>145</LINE></CONTINUE3>
+  <ENDZSTACK><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>156</LINE></ENDZSTACK>
+  <GETNUMZ><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>166</LINE></GETNUMZ>
+  <CHECKYFLAG><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>161</LINE></CHECKYFLAG>
+  <DONE3><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>188</LINE></DONE3>
+  <ADDOVERFLOWZ><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>180</LINE></ADDOVERFLOWZ>
+  <CONTINUEZ><FILE>c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm</FILE><LINE>183</LINE></CONTINUEZ>
+ </LABELS>
+</ASSEMBLER_INFO>
