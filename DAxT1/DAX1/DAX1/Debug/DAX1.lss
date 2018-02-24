@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm Sat Feb 24 11:31:53 2018
+AVRASM ver. 2.2.7  C:\Users\Kyle\Desktop\DA1\DAx\DAxT1\DAX1\DAX1\main.asm Sat Feb 24 12:55:17 2018
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328def.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328def.inc'
@@ -1014,10 +1014,11 @@ AVRASM ver. 2.2.7  c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm S
                                  
                                  STARTDEC:
 00000f 93bf                      PUSH XH			;PUSH 255 ONTO STACK
-000010 95ba                      DEC XH			;CHANGE VALUE TO 245
+000010 95ba                      DEC XH			;CHANGE VALUE TO 254
 000011 3db3                      CPI XH, 0XD3	;CHECK TO MAKE SURE WE STOP AT THE 300 NUMBERS STORED
 000012 f011                      BREQ PART1DONE	;WE DONE WITH FILLING NUMBERS FAM
 000013 940c 000f                 JMP STARTDEC	;WE STILL HAVE MORE NUMBERS TO GO, PUSH HARDER
+                                 
                                  PART1DONE:		;
 000015 93bf                      PUSH XH			;PUSH LAST NUMBER ON STACK
 000016 e0b0                      LDI XH, 0x00	;CLEAR HIGH BITS OF X FOR LATER USE
@@ -1026,7 +1027,7 @@ AVRASM ver. 2.2.7  c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm S
                                  
                                  PART2:
 000018 e000                      LDI R16, 0X00	;CLEAR CHECK REGISTER
-000019 30b2                      CPI XH, 0x02	;IF STACK HAS BEEN POP'D 300 TIMES MOVE TO STEP 4
+000019 30b2                      CPI XH, 0x02	;IF STACK HAS BEEN POP'D 300 TIMES MOVE TO STEP 3
 00001a f011                      BREQ ISDONE		;WE HAVE CHECKED TO SEE IF THE HIGH BITS MATCH THE HIGH BITS OF 0X0222
 00001b 940c 001f                 JMP RETURN		;WE ARE NOT DONE, KEEP POP' AND LOCK'N
                                  
@@ -1080,9 +1081,6 @@ AVRASM ver. 2.2.7  c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm S
 00003e bfbe                      OUT SPH, XH		;PUT SP BACK TO NUMBER LIST IN ORDER TO GRAB NEXT NUMBER
 00003f bfad                      OUT SPL, XL		
 000040 940c 0018                 JMP PART2
-                                 
-                                 
-                                 
                                  
                                  PART3:
                                  ;HERE WE WANT TO SET SP TO THE LAST VALUE IN THE 0x0600 BLOCK AND ADD IT TO THE Y REGISTER, COPY THAT VALUE TO R16/17
@@ -1170,7 +1168,7 @@ AVRASM ver. 2.2.7  c:\users\kyle\Documents\Atmel Studio\7.0\DAX1\DAX1\main.asm S
 000082 940c 0047                 JMP START3	;KEEP GRABBING BLOCK VALUES
                                  
                                  DONE3:
-                                 
+000084 ef0f                      LDI R16,0xFF ;PROGRAM END
                                  
 
 
@@ -1191,7 +1189,7 @@ counted separately from r26..r31 here.
 "ATmega328" register use summary:
 x  :   0 y  :   0 z  :   0 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:  11 r17:   7 r18:   3 r19:   3 r20:   4 
+r13:   0 r14:   0 r15:   0 r16:  12 r17:   7 r18:   3 r19:   3 r20:   4 
 r21:   6 r22:   3 r23:   0 r24:   0 r25:   0 r26:  17 r27:  21 r28:   6 
 r29:   6 r30:   6 r31:   6 
 Registers used: 13 out of 35 (37.1%)
@@ -1207,7 +1205,7 @@ clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   2 cpc   :   0 
 cpi   :  16 cpse  :   0 dec   :   1 eor   :   0 fmul  :   0 fmuls :   0 
 fmulsu:   0 icall :   0 ijmp  :   0 in    :  10 inc   :   3 jmp   :  15 
-ld    :   0 ldd   :   0 ldi   :  16 lds   :   0 lpm   :   0 lsl   :   0 
+ld    :   0 ldd   :   0 ldi   :  17 lds   :   0 lpm   :   0 lsl   :   0 
 lsr   :   0 mov   :  11 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
 neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :  14 pop   :   3 
 push  :   5 rcall :   0 ret   :   0 reti  :   0 rjmp  :   0 rol   :   0 
@@ -1221,7 +1219,7 @@ Instructions used: 15 out of 113 (13.3%)
 "ATmega328" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000108    264      0    264   32768   0.8%
+[.cseg] 0x000000 0x00010a    266      0    266   32768   0.8%
 [.dseg] 0x000100 0x000100      0      0      0    2048   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 
