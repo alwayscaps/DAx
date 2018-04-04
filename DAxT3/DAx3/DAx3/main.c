@@ -1,3 +1,9 @@
+/*
+ * DAx3.cpp
+ *
+ * Created: 3/20/2018 4:25:32 PM
+ * Author : Kyle
+ */ 
 #define F_CPU 8000000UL
 #include <avr/io.h> 
 #include <util/delay.h> 
@@ -41,9 +47,7 @@ int main(void)
 	USART_INIT();  // Call the USART initialization code
 	while(1) 
 	{ 
-		USART_SEND(46);
-		
-		int temp = ReadADC(0)*5;// read the ADC value and perform conversion to temperature
+		int temp = ReadADC(0)*6+320;// read the ADC value and perform conversion to temperature
 		// the LM34 temperature conversion is 10mV/1 degree Farenheit
 		// temperature = (ADC*5000mV)/1024 = ~5*ADC
 		USART_SEND((temp/100)%10+48);	// send tens place digit as a character
@@ -59,4 +63,6 @@ int main(void)
 	} 
 	return 0; 
 }
+
+
 
